@@ -1,0 +1,2 @@
+1. 可以把 function stack 當成 stack 來用
+2. js object 就是 hash map 了，可以不用 new Map()
