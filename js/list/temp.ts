@@ -7,5 +7,10 @@ function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
     const maxCandies = candies.map(addExtra)
     const more = lte(max)
     const answer = maxCandies.map(more)
+
+    let a
+
+    const b = ~~a
+
     return answer
 };

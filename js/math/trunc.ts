@@ -1,0 +1,1 @@
+const trunc = (a: number) => ~~a
