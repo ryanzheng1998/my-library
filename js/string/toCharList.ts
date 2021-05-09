@@ -1,0 +1,1 @@
+export const toCharList = (a: string): string[] => [...a]

@@ -1,0 +1,1 @@
+const flatten = <T>(list: T[]) => list.flat()

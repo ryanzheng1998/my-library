@@ -1,4 +1,4 @@
-const countBy = <T>(f: (a: T) => string) => (a: T[]) => {
+export const countBy = <T>(f: (a: T) => string) => (a: T[]): {[key: string]: number} => {
     let answer: {[key: string]: number} = {}
 
     for(const element of a){

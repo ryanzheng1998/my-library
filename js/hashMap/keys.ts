@@ -1,0 +1,1 @@
+const keys = <T>(o: {[key: string]: T}) => Object.keys(o)
