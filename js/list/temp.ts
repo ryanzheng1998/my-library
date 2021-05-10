@@ -1,27 +1,17 @@
-const findEdges = (grid: number[][]): {[key: string]: number} => {
-    let answer: {[key: string]: number} = {}
-
-    for(let i=0; i<grid.length; i++){
-        for(let j=0; j<grid[0].length; j++){
-            if(grid[i][j] === 1){
-                const key1 = `${i-1},${j},${i},${j}`
-                const key2 = `${i},${j-1},${i},${j}`
-                const key3 = `${i},${j},${i+1},${j}`
-                const key4 = `${i},${j},${i},${j+1}`
-                
-                answer[key1] =  ~~answer[key1] + 1
-                answer[key2] =  ~~answer[key2] + 1
-                answer[key3] =  ~~answer[key3] + 1
-                answer[key4] =  ~~answer[key4] + 1
-            }
-        }
-    }
-
-    return answer
-}
-
-function islandPerimeter(grid: number[][]): number {
-    const table = findEdges(grid)
+function findWords(words: string[]): string[] {
+    const table1 = new Set("qwertyuiop")
+    const table2 = new Set("asdfghjkl")
+    const table3 = new Set("zxcvbnm")
     
-    return Object.values(table).filter(x => x === 1).length
+    const answer = words.filter(x => {
+        const list = x.split('')
+        
+        if(list.every(x => table1.has(x))) return true
+        if(list.every(x => table2.has(x))) return true
+        if(list.every(x => table3.has(x))) return true
+        
+        return false
+    })
+    
+    return answer
 };

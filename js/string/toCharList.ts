@@ -1,1 +1,1 @@
-export const toCharList = (a: string): string[] => [...a]
+export const toCharList = (a: string): string[] => a.split('')
